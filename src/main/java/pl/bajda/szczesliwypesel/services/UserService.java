@@ -4,6 +4,7 @@ import org.assertj.core.util.Lists;
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.bajda.szczesliwypesel.model.Pesel;
 import pl.bajda.szczesliwypesel.model.User;
 import pl.bajda.szczesliwypesel.repository.UserRepository;
 
@@ -55,10 +56,6 @@ public class UserService {
                 return userRepository.save(foundUser);
     }
 
-//    public void User sendMail (Long id, User user){
-//        userRepository.findById(id);
-//
-//        if()
-//        emailService.send();
-//    }
+
+
 }

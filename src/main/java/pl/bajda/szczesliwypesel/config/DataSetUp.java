@@ -24,27 +24,10 @@ public class DataSetUp implements CommandLineRunner {
         this.emailService = emailService;
     }
 
-
-
-
     @Override
     public void run(String... args) throws Exception {
 
-        Pesel pesel = new Pesel();
-        User user = new User();
 
-
-        Document doc = Jsoup.connect("https://www.rmf.fm/r/pesel-2019.html").get();
-
-
-        Elements links = doc.select("div#xpesele-contents");
-        for (Element link : links) {
-
-
-            pesel.setData(link.select("h3").text());
-            pesel.setPesel(link.select(".xbig").select(".xlit").text().replace(" ", ""));
-        }
-        peselRepository.save(pesel);
 
 //        if(user.getMojPesel().equals(pesel.getPesel())){
 //            emailService.sendMail(user, pesel);
