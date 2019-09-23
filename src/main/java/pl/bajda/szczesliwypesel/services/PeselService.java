@@ -44,7 +44,7 @@ public class PeselService {
         for (Element link : links) {
 
 
-            String data = link.select("h3").text();
+            pesel.setData(link.select("h3").text());
             pesel.setPesel(link.select(".xbig").select(".xlit").text().replace(" ", ""));
 
 

@@ -11,6 +11,7 @@ public class Pesel {
     @GeneratedValue
     Long id;
     private String pesel;
+    private String data;
 
     public Pesel() {
     }
@@ -23,6 +24,11 @@ public class Pesel {
         this.pesel = pesel;
     }
 
+    public String getData() {
+        return data;
+    }
 
-
+    public void setData(String data) {
+        this.data = data;
+    }
 }
