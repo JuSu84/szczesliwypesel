@@ -1,10 +1,11 @@
 package pl.bajda.szczesliwypesel.api;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import pl.bajda.szczesliwypesel.model.Pesel;
 import pl.bajda.szczesliwypesel.services.PeselService;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -18,13 +19,13 @@ public class PeselController {
     }
 
     @GetMapping
-    public List<Pesel> getAllUsers(){
-        return peselService.getAllUser();
+    public List<Pesel> getAllPesels(){
+        return peselService.getAllPesels();
     }
 
 
-    @PostMapping
-    public Pesel addNewPesel(@RequestBody Pesel pesel) throws IOException {
-        return peselService.addPesel(pesel);
-    }
+//    @PostMapping
+//    public Pesel addNewPesel(@RequestBody Pesel pesel) throws IOException {
+//        return peselService.addPesel(pesel);
+//    }
 }

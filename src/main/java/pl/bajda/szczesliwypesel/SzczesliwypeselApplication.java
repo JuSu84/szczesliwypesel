@@ -10,4 +10,6 @@ public class SzczesliwypeselApplication {
         SpringApplication.run(SzczesliwypeselApplication.class, args);
     }
 
+
+
 }
