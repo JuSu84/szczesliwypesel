@@ -2,9 +2,7 @@ package pl.bajda.szczesliwypesel.services;
 
 import org.assertj.core.util.Lists;
 import org.hibernate.ObjectNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.bajda.szczesliwypesel.model.Pesel;
 import pl.bajda.szczesliwypesel.model.User;
 import pl.bajda.szczesliwypesel.repository.UserRepository;
 
@@ -13,9 +11,8 @@ import java.util.List;
 @Service
 public class UserService {
 
-    @Autowired
+
     private UserRepository userRepository;
-    private EmailService emailService;
 
 
     public UserService(UserRepository userRepository) {
@@ -47,15 +44,12 @@ public class UserService {
         }
     }
 
-    public User updateUser(Long id, User user){
+    public User updateUser(Long id, User user) {
         User foundUser = userRepository.findById(id)
-                .orElseThrow(() ->new ObjectNotFoundException(id, User.class.getName()));
+                .orElseThrow(() -> new ObjectNotFoundException(id, User.class.getName()));
 
-                foundUser.setName(user.getName());
+        foundUser.setName(user.getName());
 
-                return userRepository.save(foundUser);
+        return userRepository.save(foundUser);
     }
-
-
-
 }

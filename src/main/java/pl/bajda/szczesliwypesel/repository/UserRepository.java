@@ -1,6 +1,7 @@
 package pl.bajda.szczesliwypesel.repository;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 import pl.bajda.szczesliwypesel.model.User;
 
 import java.util.List;

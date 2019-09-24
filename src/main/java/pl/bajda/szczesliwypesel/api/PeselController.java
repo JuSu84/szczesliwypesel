@@ -19,10 +19,9 @@ public class PeselController {
     }
 
     @GetMapping
-    public List<Pesel> getAllPesels(){
+    public List<Pesel> getAllPesels() {
         return peselService.getAllPesels();
     }
-
 
 //    @PostMapping
 //    public Pesel addNewPesel(@RequestBody Pesel pesel) throws IOException {

@@ -5,4 +5,4 @@ import pl.bajda.szczesliwypesel.model.Pesel;
 
 public interface PeselRepository extends CrudRepository<Pesel, Long> {
 
-        }
+}
