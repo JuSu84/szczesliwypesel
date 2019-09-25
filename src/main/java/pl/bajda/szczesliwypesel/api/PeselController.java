@@ -1,8 +1,6 @@
 package pl.bajda.szczesliwypesel.api;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.bajda.szczesliwypesel.model.Pesel;
 import pl.bajda.szczesliwypesel.services.PeselService;
 
@@ -23,8 +21,8 @@ public class PeselController {
         return peselService.getAllPesels();
     }
 
-//    @PostMapping
-//    public Pesel addNewPesel(@RequestBody Pesel pesel) throws IOException {
-//        return peselService.addPesel(pesel);
-//    }
+    @PostMapping
+    public Pesel addNewHappyPesel(@RequestBody Pesel pesel) throws Exception {
+        return peselService.addNewHappyPesel(pesel);
+    }
 }
