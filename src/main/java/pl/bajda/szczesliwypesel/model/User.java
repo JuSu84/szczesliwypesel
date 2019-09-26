@@ -1,15 +1,14 @@
 package pl.bajda.szczesliwypesel.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 
 @Entity
+@SequenceGenerator(name="seq", initialValue=3)
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     Long id;
     private String name;
     private String mojPesel;
